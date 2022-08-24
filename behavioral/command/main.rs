@@ -35,7 +35,7 @@ fn main() {
 
 /// Executes a command and then pushes it to a history array.
 fn execute(app: &mut Cursive, mut command: impl Command + 'static) {
-    if command.execute(app) {
+    if command.execute(app).is_ok() {
         app.with_user_data(|context: &mut AppContext| {
             context.history.push(Box::new(command));
         });

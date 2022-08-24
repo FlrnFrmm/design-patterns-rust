@@ -8,4 +8,5 @@ name = "command"
 path = "main.rs"
 
 [dependencies]
+anyhow = {version = "1.0.62"}
 cursive = {version = "0.19", default-features = false, features = ["termion-backend"]}
